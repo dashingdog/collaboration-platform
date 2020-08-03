@@ -8,7 +8,7 @@ import { MatInputModule } from "@angular/material/input"
 import { MatFormFieldModule } from "@angular/material/form-field"
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatCardModule } from '@angular/material/card'
-
+import { MatListModule } from '@angular/material/list'
 @NgModule({
   declarations: [],
   imports: [
@@ -20,7 +20,8 @@ import { MatCardModule } from '@angular/material/card'
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule
   ],
   exports:[
     CommonModule,
@@ -31,7 +32,8 @@ import { MatCardModule } from '@angular/material/card'
     MatCardModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule
   ]
 })
 export class SharedModule {
