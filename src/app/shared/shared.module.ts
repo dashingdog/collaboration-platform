@@ -9,6 +9,9 @@ import { MatFormFieldModule } from "@angular/material/form-field"
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatCardModule } from '@angular/material/card'
 import { MatListModule } from '@angular/material/list'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatGridListModule } from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -21,7 +24,9 @@ import { MatListModule } from '@angular/material/list'
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
-    MatListModule
+    MatListModule,
+    MatSlideToggleModule,
+    MatGridListModule,
   ],
   exports:[
     CommonModule,
@@ -33,7 +38,9 @@ import { MatListModule } from '@angular/material/list'
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatListModule
+    MatListModule,
+    MatSlideToggleModule,
+    MatGridListModule,
   ]
 })
 export class SharedModule {

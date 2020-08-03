@@ -9,13 +9,13 @@ export class LoginComponent implements OnInit {
   quote:{
     cn:"么么哒",
     en:"mmeda",
-    pic:'a.png'
+    pic:'../../../assets/img/quote_fallback.png'
   }
   constructor() {
     this.quote={
       cn:"么么哒",
       en:"mmeda",
-      pic:'a.png'
+      pic:'../../../assets/img/quote_fallback.png'
     }
   }
 

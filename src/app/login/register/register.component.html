@@ -1,1 +1,25 @@
-<p>register works!</p>
+<form>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title> 注册：</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="您的Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="password" placeholder="您的用户名" formControlName="password">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="password" placeholder="您的密码" formControlName="password">
+      </mat-form-field>
+      <mat-grid-list cols="8" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let item of items">
+          <mat-icon [svgIcon]="item"></mat-icon>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <button mat-raised-button color='primary' type="submit" >注册</button>
+    </mat-card-content>
+  </mat-card>
+</form>
+
