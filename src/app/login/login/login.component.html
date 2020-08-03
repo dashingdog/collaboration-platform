@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>登录：</mat-card-title>
@@ -16,3 +17,40 @@
   </mat-card-actions>
 </mat-card>
 
+=======
+<form class="form" >
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title> 登录：</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput type="text" placeholder="您的Email" formControlName="email">
+          <mat-error>用户名是必填项哦</mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput type="password" placeholder="您的密码" formControlName="password">
+          <mat-error>密码不正确哦</mat-error>
+        </mat-form-field>
+        <button mat-raised-button type="submit" >登录</button>
+      </mat-card-content>
+      <mat-card-actions class="text-right">
+        <p>还没有账户？ <a routerLink="/register">注册</a></p>
+        <p>忘记 <a routerLink="/forgot">密码？</a></p>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title> 佳句</mat-card-title>
+        <mat-card-subtitle>
+          {{quote.cn}}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="quote.pic">
+      <mat-card-content>
+        <p> {{quote.en}}</p>
+      </mat-card-content>
+    </mat-card>
+  </form>
+  
+>>>>>>> a0f05fd63cd75b5d5a2a4ef042de34d917850cb2
