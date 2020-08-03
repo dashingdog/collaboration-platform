@@ -6,8 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  quote:{
+    cn:"么么哒",
+    en:"mmeda",
+    pic:'a.png'
+  }
+  constructor() {
+    this.quote={
+      cn:"么么哒",
+      en:"mmeda",
+      pic:'a.png'
+    }
+  }
 
   ngOnInit(): void {
   }
