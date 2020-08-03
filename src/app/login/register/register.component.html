@@ -13,9 +13,9 @@
       <mat-form-field class="full-width">
         <input matInput type="password" placeholder="您的密码" formControlName="password">
       </mat-form-field>
-      <mat-grid-list cols="8" rowHeight="1:1">
+      <mat-grid-list cols="6" rowHeight="1:1">
         <mat-grid-tile *ngFor="let item of items">
-          <mat-icon [svgIcon]="item"></mat-icon>
+          <mat-icon class="avatar" [svgIcon]="item"></mat-icon>
         </mat-grid-tile>
       </mat-grid-list>
       <button mat-raised-button color='primary' type="submit" >注册</button>

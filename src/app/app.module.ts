@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginRoutingModule } from './login/login-routing.module'
 import { LoginModule } from './login/login.module'
+import { ProjectModule } from './project/project.module'
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +17,8 @@ import { LoginModule } from './login/login.module'
     CoreModule,
     SharedModule,
     LoginRoutingModule,
-    LoginModule
+    LoginModule,
+    ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
