@@ -6,10 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginRoutingModule } from './login/login-routing.module'
 import { LoginModule } from './login/login.module'
-import { ProjectModule } from './project/project.module'
+import { ProjectModule } from './project/project.module';
+import { TaskModule } from './task/task.module'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,7 +19,9 @@ import { ProjectModule } from './project/project.module'
     SharedModule,
     LoginRoutingModule,
     LoginModule,
-    ProjectModule
+    ProjectModule,
+    TaskModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

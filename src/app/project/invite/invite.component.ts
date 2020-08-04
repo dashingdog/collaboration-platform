@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-invite',
@@ -16,14 +17,15 @@ export class InviteComponent implements OnInit {
     id:3,
     name:'wangwu'
   }]
-
-  option:""
   constructor() { }
 
   ngOnInit(): void {
   }
   onClick(){
 
+  }
+  displayUser(user:{id:string,name:string}):string{
+    return  user?user.name:''
   }
 
 }

@@ -11,6 +11,11 @@ const routes: Routes = [
     path:'projects',
     loadChildren:'app/project#ProjectModule',
     pathMatch:'full'
+  },
+  {
+    path:'tasklist',
+    loadChildren:'app/task#TaskModule',
+    pathMatch:'full'
   }
 ];
 

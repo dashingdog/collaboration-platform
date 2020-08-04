@@ -7,7 +7,6 @@
         type="text"
         placeholder="组员姓名"
         [matAutocomplete]="autoMembers"
-        [matAutocompleteConnectedTo]="origin"
       />
     </mat-form-field>
   </div>
@@ -18,8 +17,8 @@
     <button type="button" mat-button mat-dialog-close>关闭</button>
   </div>
 </form>
-<mat-autocomplete #autoMembers="matAutocomplete">
-  <mat-option *ngFor="let item of items" [value]="option">
+<mat-autocomplete #autoMembers="matAutocomplete" [displayWith]="displayUser">
+  <mat-option *ngFor="let item of items" [value]="item.name">
     {{ item.name }}
   </mat-option>
 </mat-autocomplete>

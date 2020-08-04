@@ -1,0 +1,12 @@
+.header-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+}
+.fill{
+    flex:1;
+    text-align: center;
+}
