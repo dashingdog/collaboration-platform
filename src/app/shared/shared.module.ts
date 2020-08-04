@@ -22,7 +22,9 @@ import { MatNativeDateModule } from '@angular/material/core'
 import { MatSelectModule } from '@angular/material/select';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component'
 @NgModule({
-  // declarations:[ConfirmDialogComponent],
+  declarations:[
+    ConfirmDialogComponent
+  ],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -45,7 +47,6 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
-    // ConfirmDialogComponent,
   ],
   exports:[
     CommonModule,
@@ -69,8 +70,6 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
-    // ConfirmDialogComponent,
-
   ],
   entryComponents:[ConfirmDialogComponent]
 })

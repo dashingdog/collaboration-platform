@@ -51,7 +51,7 @@ export class ProjectListComponent implements OnInit {
       content:"您确认删除该项目吗"
     }});
     dialogRef.afterClosed().subscribe(result=>{
-      console.log(result)
+      console.log(result);
     })
   }
 

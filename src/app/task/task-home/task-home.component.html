@@ -3,6 +3,8 @@
     <app-task-header
     (newTask)='launchTaskDialog()'
     (moveAll)='launchCopyDialog()'
+    (delList)='launchConfirmDialog()'
+    (onEditList)='launchEditListDialog()'
     [header]="list.name"></app-task-header>
     <app-task-item
       (taskClick) = "launchUpdateTaskDialog(task)"
@@ -15,7 +17,7 @@
   mat-fab
   class="fab-button"
   type="button"
-  (click)="openNewProjectDialog()"
+  (click)="launchNewListDialog()"
 >
   <mat-icon>add</mat-icon>
 </button>
