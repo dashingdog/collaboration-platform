@@ -1,1 +1,25 @@
-<p>task-item works!</p>
+<mat-list-item
+  class="container"
+  (click)='onItemClick()'
+  [ngClass]="{
+    'priority-normal':item.priority===3,
+    'priority-important':item.priority===2,
+    'priority-emergency':item.priority===1
+  }"
+>
+  <mat-checkbox
+    class=" status"
+    [checked]="item.completed"
+    (click) = "onCheckBoxClick($event)"
+  ></mat-checkbox>
+  <div mat-line class="content" [ngClass]="{ completed: item.completed }">
+    <span [matTooltip]="item.desc"> {{ item.desc }}</span>
+  </div>
+  <div mat-line class="bottom-bar">
+    <span class="due-date" *ngIf="item.dueDate">
+      {{ item.dueDate | date: "yy-MM-dd" }}
+    </span>
+    <mat-icon *ngIf="item.reminder">alarm</mat-icon>
+  </div>
+  <mat-icon class="avatar" [svgIcon]="avatar" mat-list-avatar></mat-icon>
+</mat-list-item>

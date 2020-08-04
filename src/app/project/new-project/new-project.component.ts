@@ -6,12 +6,13 @@ import { MAT_DIALOG_DATA , MatDialogRef }from '@angular/material/dialog';
   styleUrls: ['./new-project.component.scss']
 })
 export class NewProjectComponent implements OnInit {
-
+  title=''
   //  接收数据,回传参数
   constructor(@Inject(MAT_DIALOG_DATA) private data,private dialogRef:MatDialogRef<NewProjectComponent>) { }
 
   ngOnInit(): void {
     console.log(JSON.stringify(this.data))
+    this.title =this.data.title;
   }
 
   onClick(){
