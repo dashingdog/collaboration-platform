@@ -15,8 +15,8 @@ export class NewProjectComponent implements OnInit {
     this.title =this.data.title;
   }
 
-  onClick(){
-    this.dialogRef.close('I received your message');
+  onClick(result:boolean){
+    this.dialogRef.close(result);
   }
 
 }

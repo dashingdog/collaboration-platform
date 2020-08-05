@@ -7,16 +7,16 @@ const routes: Routes = [
     redirectTo:'/login',
     pathMatch:'full'
   },
-  {
-    path:'projects',
-    loadChildren:'app/project#ProjectModule',
-    pathMatch:'full'
-  },
-  {
-    path:'tasklist',
-    loadChildren:'app/task#TaskModule',
-    pathMatch:'full'
-  }
+  // {
+  //   path:'projects',
+  //   loadChildren:'app/project#ProjectModule',
+  //   pathMatch:'full'
+  // },
+  // {
+  //   path:'tasklist',
+  //   loadChildren:'app/task#TaskModule',
+  //   pathMatch:'full'
+  // }
 ];
 
 @NgModule({

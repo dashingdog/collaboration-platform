@@ -7,17 +7,23 @@ import { DomSanitizer } from "@angular/platform-browser";
 import { loadSvgResources } from "../utils/svg.util"
 import { HttpClientModule } from '@angular/common/http'
 import { SharedModule } from '../shared/shared.module'
+import { AppRoutingModule } from '../app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
   imports: [
+    AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   // 不导出的话，只能在当前模块使用
   exports:[
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ]
 })
 export class CoreModule {

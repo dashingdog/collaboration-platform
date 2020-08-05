@@ -9,7 +9,7 @@
     </mat-form-field>
   </div>
   <div class="mat-dialog-actions">
-    <button type='button' mat-raised-button color='primary' >保存</button>
-    <button type='button' mat-button mat-dialog-close (click)="onClick()">关闭</button>
+    <button type='button' mat-raised-button color='primary' (click)="onClick(true)">保存</button>
+    <button type='button' mat-button mat-dialog-close (click)="onClick(false)">关闭</button>
   </div>
 </form>
