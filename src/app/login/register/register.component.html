@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form,$event)" class="form">
   <mat-card>
     <mat-card-header>
       <mat-card-title> 注册：</mat-card-title>
@@ -8,16 +8,22 @@
         <input matInput type="text" placeholder="您的Email" formControlName="email">
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input matInput type="password" placeholder="您的用户名" formControlName="password">
+        <input matInput type="text" placeholder="您的用户名" formControlName="name">
       </mat-form-field>
       <mat-form-field class="full-width">
         <input matInput type="password" placeholder="您的密码" formControlName="password">
       </mat-form-field>
-      <mat-grid-list cols="6" rowHeight="1:1">
-        <mat-grid-tile *ngFor="let item of items">
-          <mat-icon class="avatar" [svgIcon]="item"></mat-icon>
-        </mat-grid-tile>
-      </mat-grid-list>
+      <mat-form-field class="full-width">
+        <input matInput type="password" placeholder="重复输入您的密码" formControlName="repeat">
+      </mat-form-field>
+      <app-image-list-select
+        [useSvgIcon]="true"
+        [cols]="6"
+        [title]="'请选择头像'"
+        [items]='items'
+        formControlName='avatar'
+      >
+      </app-image-list-select>
       <button mat-raised-button color='primary' type="submit" >注册</button>
     </mat-card-content>
   </mat-card>

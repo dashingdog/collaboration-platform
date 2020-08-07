@@ -19,13 +19,18 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatNativeDateModule } from '@angular/material/core'
 import { MatSelectModule } from '@angular/material/select';
-import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component'
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { ImageListSelectComponent } from './image-list-select/image-list-select.component'
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations:[
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ImageListSelectComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
@@ -48,6 +53,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
   ],
   exports:[
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
@@ -67,6 +74,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
+    ImageListSelectComponent,
   ],
   entryComponents:[ConfirmDialogComponent]
 })
