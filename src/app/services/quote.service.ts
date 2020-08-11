@@ -9,7 +9,7 @@ export class QuoteService {
 
   getQuote():Observable<any>{
     const uri = `${this.config.uri}/quotes/${Math.floor(Math.random()*10)}`
-    return this.http.get(uri);
+    return this.http.get(uri)
   }
 }
 

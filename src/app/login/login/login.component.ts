@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-
+import {QuoteService } from '../../services/quote.service'
+import { Quote } from '../../domain/quote.model';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  quote={
-    cn:"么么哒",
-    en:"mmeda",
-    pic:'assets/img/quote_fallback.jpg'
+  quote:Quote={
+    cn:"",
+    en:"",
+    pic:""
   }
-  constructor() {
-
+  constructor(private quoteServices$:QuoteService) {
+    this.quoteServices$
+    .getQuote()
+    .subscribe(q=>this.quote=q);
   }
 
   ngOnInit(): void {

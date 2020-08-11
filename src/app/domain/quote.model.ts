@@ -1,6 +1,6 @@
 export interface Quote{
   id?:string,
   cn:string,
-  pc:string,
+  pic:string,
   en:string
 }
