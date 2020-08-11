@@ -24,6 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     SidebarComponent,
     AppRoutingModule,
     BrowserAnimationsModule,
+  ],
+  providers:[
+    {provide:'BASE_CONFIG',useValue:{uri:'http://localhost:3000'}}
   ]
 })
 export class CoreModule {
