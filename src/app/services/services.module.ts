@@ -9,6 +9,9 @@ import { QuoteService } from './quote.service'
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    QuoteService
   ]
 })
 export class ServicesModule { }
