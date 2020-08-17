@@ -22,10 +22,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component'
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AgeInputComponent } from './age-input/age-input.component';
 @NgModule({
   declarations:[
     ConfirmDialogComponent,
-    ImageListSelectComponent
+    ImageListSelectComponent,
+    AgeInputComponent
   ],
   imports: [
     CommonModule,
