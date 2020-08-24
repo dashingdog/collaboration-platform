@@ -13,7 +13,7 @@ import {
   isFuture
 } from 'date-fns'
 export const isValidDate = (val: string):boolean => {
-  const date = parse(val);
+  const date = parse(val,'yyyy-MM-dd',new Date());
   return isDate(date)
         &&isValid(date)
         &&!isFuture(date)

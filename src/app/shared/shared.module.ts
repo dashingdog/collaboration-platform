@@ -77,6 +77,7 @@ import { AgeInputComponent } from './age-input/age-input.component';
     MatNativeDateModule,
     MatSelectModule,
     ImageListSelectComponent,
+    AgeInputComponent,
   ],
   entryComponents:[ConfirmDialogComponent]
 })

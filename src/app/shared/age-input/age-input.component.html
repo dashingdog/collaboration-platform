@@ -27,7 +27,7 @@
       </mat-form-field>
     </div>
     <div>
-      <mat-button-toggle-group  formControlName='ageUnit'>
+      <mat-button-toggle-group  formControlName='ageUnit' [(ngModel)]="selectedUnit">
         <mat-button-toggle *ngFor="let unit of ageUnits" [value]="unit.value">
           {{unit.label}}
         </mat-button-toggle>

@@ -1,4 +1,4 @@
-import { Component, OnInit , forwardRef } from '@angular/core';
+import { Component, OnInit , forwardRef, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { ControlValueAccessor , NG_VALUE_ACCESSOR , NG_VALIDATORS, FormBuilder, FormGroup, FormControl} from '@angular/forms'
 import { map ,  filter , startWith , debounceTime,distinctUntilChanged} from 'rxjs/operators';
 import { combineLatest , merge } from 'rxjs';
@@ -33,7 +33,8 @@ import{isValidDate} from '../../utils/date.util'
       useExisting:forwardRef(()=>AgeInputComponent),
       multi:true
     }
-  ]
+  ],
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 
 export enum AgeUnit {
@@ -47,7 +48,14 @@ export interface Age {
   unit: AgeUnit
 }
 
-export class AgeInputComponent implements ControlValueAccessor {
+export class AgeInputComponent implements ControlValueAccessor,OnInit,OnDestroy {
+
+  selectedUnit = AgeUnit.Year;
+  ageUnits=[
+    {value:AgeUnit.Year,label:'岁'},
+    {value:AgeUnit.Month,label:'月'},
+    {value:AgeUnit.Day,label:'天'},
+  ]
   form:FormGroup
   private propagateChange = (_:any)=>{}
   constructor(private fb:FormBuilder) { }
@@ -110,7 +118,7 @@ export class AgeInputComponent implements ControlValueAccessor {
     })
   }
   toAge(dateStr:string):Age{
-    const date = parse(dateStr);
+    const date = parse(dateStr,'yyyy-MM-dd',new Date());
     const now = Date.now();
     return isBefore(subDays(now,90),date)?
       {age:differenceInDays(now,date),unit:AgeUnit.Day}:
@@ -152,7 +160,7 @@ export class AgeInputComponent implements ControlValueAccessor {
   validateDate(c:FormControl){
     const val =  c.value;
     return isValidDate(val)?null:{
-      dateOfBirthInvalid: true
+      birthdayInvalid: true
     };
   }
 
@@ -180,6 +188,9 @@ export class AgeInputComponent implements ControlValueAccessor {
     }
   }
   writeValue(obj:any):void{
+    if(obj){
+      this.form.get('birthday').patchValue(format(obj,'YYYY-MM-DD'))
+    }
   }
   registerOnChange(fn:any):void{
     this.propagateChange = fn;
@@ -187,5 +198,7 @@ export class AgeInputComponent implements ControlValueAccessor {
   registerOnTouched(fn:any):void{
 
   }
+  ngOnDestroy(){
 
+  }
 }
